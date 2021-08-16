@@ -1688,11 +1688,13 @@ section {
   color: #ed2b66;
   padding: 5px 10px;
   border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .footer .input-container input {    
   border:solid; 
   border-width: .5px; 
+  border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   border-color: #ed2b66;  
 }
@@ -1704,7 +1706,7 @@ section {
   padding: 3px 20px;
   border: none;
   background-color: #ed2b66;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   color: rgb(255, 255, 255);
   font-family: 'Poppins', sans-serif;    
 }
