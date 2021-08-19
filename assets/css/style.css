@@ -586,9 +586,80 @@ section {
 
 
 /*--------------------------------------------------------------
-# Alumni
+# Alumni-start
 --------------------------------------------------------------*/
+.alumni .box {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
 
+.alumni h3 {
+  font-weight: 400;
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding: 20px 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+.alumni h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff7f5d;
+  bottom: 15px;
+  left: calc(50% - 25px);
+}
+
+.alumni .alumni-name {
+  margin: 8px 0 15px;
+  font-size: 20px;
+}
+
+.alumni ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.alumni .btn-wrap {
+  margin: 0px 0px -20px;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.alumni .btn-buy {
+  background: #ff7f5d;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.alumni .btn-buy:hover {
+  background: #ff9377;
+}
+
+/*--------------------------------------------------------------
+# Alumni-end
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
