@@ -1,0 +1,108 @@
+/* THIS IS FOR THE EVENTS SECTION OF THE PAGE */
+
+.section-project-title {
+  font-size: 36px;
+  color: #212121;
+  line-height: 52px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.section-project-title:before {
+  position: absolute;
+  content: '';
+  left: 15px;
+  bottom: 8px;
+  width: 48px;
+  height: 1px;
+  background-color: #E91E63;
+}
+
+.section-project-title:after {
+  position: absolute;
+  content: '';
+  left: 0px;
+  bottom: 2px;
+  width: 48px;
+  height: 1px;
+  background-color: #E91E63;
+}
+
+.section-project-title:before, .section-project-title:after {
+  left: 50%;
+  margin-left: -45px;
+}
+
+.section-project-title:after {
+  margin-left: -30px;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+
+.accordion .header-title {
+  position: relative;
+}
+
+.accordion .header-title:after {
+  font-family: "LineIcons";
+  content: "\e93a";
+  position: absolute;
+  right: 10px;
+  color: #999;
+  top: 50%;
+  line-height: 1;
+  padding: 0px 5px;
+  margin-top: -7px;
+}
+
+.accordion .collapsed:after {
+  content: "\e940";
+}
+
+.accordion .card-header {
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card-header {
+  cursor: pointer;
+}
+
+.accordion .card-header{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.card-body {
+  padding-left: 56px;
+  background-color: rgb(181, 181, 181);
+  color: rgb(255, 255, 255);
+}
+
+.read-button {
+  background-color: #60ac08; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
