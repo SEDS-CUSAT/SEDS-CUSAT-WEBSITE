@@ -18,6 +18,9 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
+  <!-- about section fade up transition -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -91,14 +94,28 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About Us</h2>
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="assets/img/about.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h1 style="color:white">ABOUT SEDS CUSAT</h1>
+            
+            
+            <p style="color:white">SEDS CUSAT is part of SEDS India. SEDS India is the Indian wing of the largest space-related student body in the world. It is a premier platform for engaging in space-sciences and related fields, broadening one's knowledge, and gaining opportunities to make valuable connections. It's a platform for people to share their love and interest in the space field and network within the industries.
+              Members are engaged in various technical projects, engineering competitions, workshops, social events, seminars, outreach programs and space-related activities.
+              The goal is to promote space exploration and educate young minds in space science, technology and its benefits.            
+              
+            </p>
+          </div>
         </div>
 
-
+      </div>
+    </section>
 
       </div>
     </section>
@@ -723,7 +740,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <!-- about section transition -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init(); </script>
+  
 </body>
 
 </html>
