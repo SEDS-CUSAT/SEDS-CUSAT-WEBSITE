@@ -432,7 +432,9 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
+
   background: url("../img/hero-bg.jpg") top center;
+
   background-size: cover;
   position: relative;
   margin-bottom: -70px;
@@ -1130,15 +1132,18 @@ section {
 }
 
 /*--------------------------------------------------------------
+
 # Alumni
 --------------------------------------------------------------*/
 .alumni .box {
   padding: 20px;
   background: #fff;
+
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+
   text-align: center;
 }
 
@@ -1184,6 +1189,7 @@ section {
 }
 
 .alumni .btn-buy {
+
   background: #ff7f5d;
   display: inline-block;
   padding: 8px 35px 9px 35px;
@@ -1197,9 +1203,11 @@ section {
   transition: 0.3s;
 }
 
+
 .alumni .btn-buy:hover {
   background: #ff9377;
 }
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
