@@ -513,14 +513,14 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -544,6 +544,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about{
+  min-height: 100vh;
+  max-width: 100%;
+}
 .about {
   background: url("https://img.wallpapersafari.com/desktop/1920/1080/96/96/CHE3v5.jpg") center center;
   background-size: cover;
@@ -652,14 +656,22 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
-
+#events{
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
+}
 
 
 
 /*--------------------------------------------------------------
 # Projects 
 --------------------------------------------------------------*/
-
+#projects{
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
+}
 
 
 /*--------------------------------------------------------------
@@ -667,11 +679,12 @@ section {
 --------------------------------------------------------------*/
 
 #blogs{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
 }
 
-.grid{
+.blogs .container .grid{
   width: 100%;
   height: 100%;
   padding-top: 30px;
@@ -686,7 +699,7 @@ section {
   align-items: center;
 }
 
-.cardcontainer{
+.blogs .container .grid .cardcontainer{
 max-width: 290px;
 min-width: 200px;
 margin-left: auto;
@@ -704,19 +717,19 @@ transition: all 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 1160px) {
-  .cardcontainer{
+  .blogs .container .grid.cardcontainer{
     margin: 20px;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .cardcontainer{
+  .blogs .container .grid .cardcontainer{
     margin: 20px;
     padding: 40px;
   }
 }
 
-.cardcontainer:hover{
+.blogs .container .grid .cardcontainer:hover{
 border: 1px solid rgba(255, 255, 255, 1);
 background: dodgerblue;
 color: white;
@@ -725,7 +738,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 74px 75px, rgba(0, 0, 0, 0.12) 0px -12px 30p
 transform: translateY(-15px);
 }
 
-.cardcontainer img {
+.blogs .container .grid .cardcontainer img {
   width: 100%;
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.40);
@@ -736,18 +749,18 @@ transform: translateY(-15px);
   transition: all 0.4s ease-in-out;
 }
 
-.cardcontainer:hover img{
+.blogs .container .grid .cardcontainer:hover img{
   filter: grayscale(0%);
   border: 1px solid rgba(255, 255, 255, 0);
   transition: all 0.4s ease-in-out;
 }
 
-.cardcontainer h1{
+.blogs .container .grid .cardcontainer h1{
   line-height: 50%;
   font-size: 150%;
 }
 
-.bottomline{
+.blogs .container .grid .cardcontainer .bottomline{
   display: flex;
   flex-direction: row;
   justify-content: between;
@@ -756,19 +769,19 @@ transform: translateY(-15px);
 }
 
 
-.cardcontainer svg{
+.blogs .container .grid .cardcontainer svg{
   padding-left: 10px;
   transition: all 0.4s ease-in-out;
   fill: dodgerblue;
 }
 
-.cardcontainer:hover svg{
+.blogs .container .grid .cardcontainer:hover svg{
   color: white;
   transition: all 0.4s ease-in-out;
   fill: white;
 }
 
-.cardbutton{
+.blogs .container .grid .cardcontainer .bottomline .cardbutton{
   border-radius: 10px;
   background: dodgerblue;
   color: white;
@@ -783,18 +796,18 @@ transform: translateY(-15px);
   transition: all 0.4s ease-in-out;
 }
 
-.cardbutton:hover{
+.blogs .container .grid .cardcontainer .bottomline .cardbutton:hover{
   transform: translateY(-4px) scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
-.cardcontainer:hover .cardbutton{
+.blogs .container .grid .cardcontainer:hover .cardbutton{
   background: white;
   color: dodgerblue;
   transition: all 0.4s ease-in-out;
 }
 
-.cardcontainer p{
+.blogs .container .grid .cardcontainer p{
   position: relative;
   top: 5px;
   bottom: 10px;
@@ -802,19 +815,19 @@ transform: translateY(-15px);
   font-size: 10pt;
 }
 
-.cardcontainer svg:hover{
+.blogs .container .grid .cardcontainer svg:hover{
   transform: translateY(5px);
   transition: all 0.3s ease-in-out;
 }
 
-.extra{
+.blogs .container .extra{
 display: flex;
 justify-content: center;
 align-items: center;
 margin-top: -87px;
 }
 
-.extra .morebutton{
+.blogs .container .extra .morebutton{
   background: dodgerblue;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -823,13 +836,13 @@ margin-top: -87px;
   font-weight: 500;
   padding: 8px 12px 8px 12px;
   display: inline-block;
-  max-width: 100px;
+  max-width: 150px;
   text-align: center;
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
 }
 
-.extra .morebutton:hover{
+.blogs .container .extra .morebutton:hover{
   transform: translateY(-4px) scale(1.05);
   transition: all 0.4s ease-in-out;
   background: rgb(0, 0, 0);
@@ -843,6 +856,13 @@ margin-top: -87px;
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+
+#team{
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
+}
+
 .team-row {
   position: relative;
   column-count: 3;
@@ -942,7 +962,9 @@ transform: translate(-50%, -50%);
 background-color: dodgerblue;
 color: rgb(255, 255, 255);
 font-size: 16px;
-padding: 16px 30px;
+width: 100px;
+height: 30px;
+padding: 5px;
 border: none;
 cursor: pointer;
 border-radius: 5px;
@@ -958,6 +980,11 @@ text-align: center;
 /*--------------------------------------------------------------
 # Alumni-start
 --------------------------------------------------------------*/
+#alumni{
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
+}
 .alumni .box {
   padding: 20px;
   background: #fff;
@@ -1035,6 +1062,13 @@ text-align: center;
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+
+#gallery{
+  min-height: 100vh;
+  max-width: 100%;
+  padding-top: 5px;
+}
+
 .container.gallery-container {
   background-color: rgb(255, 255, 255);
   color: #e5e9f0;
