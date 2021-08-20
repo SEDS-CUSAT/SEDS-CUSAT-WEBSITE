@@ -1191,6 +1191,16 @@ footer{
 
 .footer-container .left-col .logo{
   width: 180px;
+  margin-left: 88px;
+}
+
+.footer-container .left-col .rights-text{
+  margin-top: 10px;
+  margin-bottom: -25px;
+}
+
+.footer-container .right-col{
+  margin-top: -55px;
 }
 
 .footer-container .right-col h1{
@@ -1254,6 +1264,10 @@ footer{
     width: 100%;
     text-align: center;
   }
+
+  .footer-container .left-col .logo{
+    margin-left: 0px;
+  }
 }
 
 
@@ -1262,6 +1276,9 @@ footer{
     margin: 0;
     width: 100%;
     margin-top: 20px;
+    }
+    .footer-container .left-col .logo{
+      margin-left: 0px;
     }
 }
 
