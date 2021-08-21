@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Valera Bootstrap Template - Index</title>
+  <title>SEDS CUSAT</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,6 +49,7 @@
   <script type='text/javascript'
     src='https://demo.themely.com/parallel/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
   <!-- end -->
+  
   <!--gallery-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
@@ -149,8 +150,7 @@
             <section id="events-grid">
               <div class="container">
                 <div class="col-md-12 heading">
-                  <h2 class="title">UPCOMING EVENT 1<span></span></h2>
-                  <p class="subtitle">Some details regarding the event.</p>
+                  <h2 class="title" id="upcoming-events-title">UPCOMING EVENT 1<span></span></h2>
                 </div>
 
                 <div>
@@ -159,29 +159,20 @@
                       <div class="col-xs-12 col-md-6 col-lg-4">
                         <div class="about-item">
                           <img class="img-fluid" src="assets/img/our-values-1.jpg" alt="Image">
-                          <div class="about-text">
-                            <h3><a href="#">VENUE</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
-                          </div>
                         </div>
                       </div>
                       <div class="col-xs-12 col-md-6 col-lg-4">
                         <div class="about-item">
                           <img class="img-fluid" src="assets/img/our-values-2.jpg" alt="Image">
-                          <div class="about-text">
-                            <h3><a href="#">TIME</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
-                          </div>
                         </div>
                       </div>
                       <div class="col-xs-12 col-md-6 col-lg-4">
                         <div class="about-item">
                           <img class="img-fluid" src="assets/img/our-values-3.jpg" alt="Image">
-                          <div class="about-text">
-                            <h3><a href="#">SEATS LEFT</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
-                          </div>
                         </div>
+                      </div>
+                      <div id="event-details">
+                        <h4>Some details regarding events</h4>
                       </div>
                     </div>
                   </div>
@@ -190,13 +181,8 @@
             </section>
           </div>
 
-          <div class="row">
-            <div class="col-12">
-              <div class="section-title-header text-center">
-                <h1 class="section-project-title">Event Schedules</h1>
-                <p>Event<br>Details</p>
-              </div>
-            </div>
+          <div id="events-schedule-heading">
+            <b>Events Schedule</b>
           </div>
 
           <div>
@@ -206,7 +192,7 @@
 
                   <div>
                     <div id="headingOne">
-                      <div class="card-header" data-toggle="collapse" data-target="#collapseOne">
+                      <div class="card-head card-header" data-toggle="collapse" data-target="#collapseOne">
                         <span class="time">10am - 12:30pm</span>
                         <h4>Day 1</h4>
                         <h5 class="name">David Warner</h5>
@@ -215,9 +201,9 @@
 
                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                       <div class="card-body">
-                        <p>Details</p>
+                        <p class="card-body-details">Details</p>
                         <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                          <span class="location-label">Location:</span><span class="location-details">Hall 1 , Building A, Golden Street, Southafrica</span>
                         </div>
                       </div>
                     </div>
@@ -226,7 +212,7 @@
 
                   <div>
                     <div id="headingTwo">
-                      <div class="card-header" data-toggle="collapse" data-target="#collapseTwo">
+                      <div class="card-head card-header" data-toggle="collapse" data-target="#collapseTwo">
                         <span class="time">10am - 12:30pm</span>
                         <h4>Day 2</h4>
                         <h5 class="name">David Warner</h5>
@@ -235,9 +221,9 @@
 
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                       <div class="card-body">
-                        <p>Details</p>
+                        <p class="card-body-details">Details</p>
                         <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                          <span class="location-label">Location:</span><span class="location-details">Hall 1 , Building A, Golden Street, Southafrica</span>
                         </div>
                       </div>
                     </div>
@@ -246,7 +232,7 @@
 
                   <div>
                     <div id="headingThree">
-                      <div class="card-header" data-toggle="collapse" data-target="#collapseThree">
+                      <div class="card-head card-header" data-toggle="collapse" data-target="#collapseThree">
                         <span class="time">10am - 12:30pm</span>
                         <h4>Day 3</h4>
                         <h5 class="name">David Warner</h5>
@@ -254,10 +240,10 @@
                     </div>
 
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Details</p>
+                      <div class="card-body" id="last-row">
+                        <p class="card-body-details">Details</p>
                         <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                          <span class="location-label">Location:</span><span class="location-details">Hall 1 , Building A, Golden Street, Southafrica</span>
                         </div>
                       </div>
                     </div>
@@ -268,7 +254,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="button-events">
             <button class="read-button " type="button">Read more</button>
           </div>
 
