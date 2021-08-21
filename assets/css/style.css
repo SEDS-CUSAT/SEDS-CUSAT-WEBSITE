@@ -684,37 +684,15 @@ section {
   padding-top: 5px;
 }
 
-.blogs .container .grid{
-  width: 100%;
-  height: 100%;
-  padding-top: 30px;
-  padding-bottom: 120px;
-  margin-top: -49px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+/*.blogs .container .row {
+  margin-top: 30px;
+}*/
+
+.blogs .container .row .col-sm-4{
+margin-top: 40px;
 }
 
-.blogs .container .grid .cardcontainer{
-max-width: 290px;
-min-width: 200px;
-margin-left: auto;
-margin-right: auto;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-justify-content: center;
-align-content: center;
-padding: 30px;
-border: 1px solid rgba(64, 64, 64, 0.70);
-transition: all 0.4s ease-in-out;
-}
-
-@media screen and (max-width: 1160px) {
+/*@media screen and (max-width: 1160px) {
   .blogs .container .grid.cardcontainer{
     margin: 20px;
   }
@@ -725,58 +703,53 @@ transition: all 0.4s ease-in-out;
     margin: 20px;
     padding: 40px;
   }
-}
+}*/
 
-.blogs .container .grid .cardcontainer:hover{
+/*.blogs .container .grid .cardcontainer:hover{
 border: 1px solid rgba(255, 255, 255, 1);
 background: dodgerblue;
 color: white;
 transition: all 0.4s ease-in-out;
 transform: translateY(-15px);
-}
+}*/
 
-.blogs .container .grid .cardcontainer img {
+/*.blogs .container .grid .cardcontainer img {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.40);
   margin-bottom: 15px;
   border: 1px solid rgba(255, 255, 255, 1);
   transition: all 0.4s ease-in-out;
-}
+}*/
 
-.blogs .container .grid .cardcontainer:hover img{
+/*.blogs .container .grid .cardcontainer:hover img{
   filter: grayscale(0%);
   border: 1px solid rgba(255, 255, 255, 0);
   transition: all 0.4s ease-in-out;
-}
+}*/
 
-.blogs .container .grid .cardcontainer h1{
+.blogs .container .row .col-sm-4 h1{
   line-height: 50%;
   font-size: 150%;
 }
 
-.blogs .container .grid .cardcontainer .bottomline{
+.blogs .container .row .col-sm-4 .bottomline{
   display: flex;
   flex-direction: row;
-  justify-content: between;
+  justify-content: end;
   align-items: center;
   flex-wrap: nowrap;
 }
 
 
-.blogs .container .grid .cardcontainer svg{
+.blogs .container .row .col-sm-4 svg{
   padding-left: 10px;
   transition: all 0.4s ease-in-out;
   fill: dodgerblue;
 }
 
-.blogs .container .grid .cardcontainer:hover svg{
-  color: white;
-  transition: all 0.4s ease-in-out;
-  fill: white;
-}
-
-.blogs .container .grid .cardcontainer .bottomline .cardbutton{
-  border-radius: 10px;
+.blogs .container .row .col-sm-4 .bottomline .cardbutton{
+  text-decoration: none;
+  /*border-radius: 10px;
   background: dodgerblue;
   color: white;
   text-decoration: none;
@@ -786,21 +759,10 @@ transform: translateY(-15px);
   display: inline-block;
   max-width: 100px;
   text-align: center;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;*/
 }
 
-.blogs .container .grid .cardcontainer .bottomline .cardbutton:hover{
-  transform: translateY(-4px) scale(1.05);
-  transition: all 0.3s ease-in-out;
-}
-
-.blogs .container .grid .cardcontainer:hover .cardbutton{
-  background: white;
-  color: dodgerblue;
-  transition: all 0.4s ease-in-out;
-}
-
-.blogs .container .grid .cardcontainer p{
+.blogs .container .row .col-sm-4 p{
   position: relative;
   top: 5px;
   bottom: 10px;
@@ -808,20 +770,16 @@ transform: translateY(-15px);
   font-size: 10pt;
 }
 
-.blogs .container .grid .cardcontainer svg:hover{
-  transform: translateY(5px);
-  transition: all 0.3s ease-in-out;
-}
-
 .blogs .container .extra{
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: -87px;
+margin-top: 38px;
 }
 
 .blogs .container .extra .morebutton{
-  background: dodgerblue;
+  text-decoration: none;
+  /*background: dodgerblue;
   color: white;
   text-decoration: none;
   font-size: 10pt;
@@ -831,16 +789,16 @@ margin-top: -87px;
   max-width: 150px;
   text-align: center;
   transition: all 0.4s ease-in-out;
-  border-radius: 10px;
+  border-radius: 10px;*/
 }
-
+/*
 .blogs .container .extra .morebutton:hover{
   transform: translateY(-4px) scale(1.05);
   transition: all 0.4s ease-in-out;
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   
-}
+}*/
 
 
 
