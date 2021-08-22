@@ -1026,40 +1026,58 @@ text-decoration: none;
   padding-top: 5px;
 }
 
-.gallery .container .wrapper {
-  margin: 0 auto;
-  max-width: 60rem;
-  text-align: center;
-}
+.gallery .container .gird-container .gird-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #354F90;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+  color: white;
+ 
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ }
+ .gallery .container .gird-container .gird-item .ejercico a {
+   opacity: 0;
+   text-decoration:none;
+   cursor: none;
+ }
+ .gallery .container .gird-container .gird-item:hover .ejercico a {
+   color: white;
+ 
+   opacity: 1;
+   
+ }
+ .gallery .container .gird-container .gird-item:hover {
+   filter: opacity(0.9);
+   transform: scale(1.04);
+ }
+ 
+ /*-------------Gird style----------*/
+ 
+ .gallery .container .gird-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(180px, 3fr));
+    /*1fr Columnas que puedes colocar */
+    grid-auto-rows: minmax(180px, auto);
+    gap:15px; /*Separación automática*/
+    padding: 10px;
+    grid-auto-flow: dense; /*Para que no hayan espacios en blanco glaeria*/
+ }
+ 
+ @media(min-width: 600px){
+ .wide {
+   grid-column: span 1;
+ }
+ 
+ .tall {
+   grid-row: span 1;
+ }
+ }
 
-.gallery .container .wrapper .gallery-container {
-  background: #272624;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 2rem 0;
-}
-
-.gallery .container .wrapper .gallery-container ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.gallery .container .wrapper .gallery-container ul li img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-.gallery .container .wrapper .gallery-container ul.masonry-gallery {
-  columns: 12rem;
-  column-gap: 1rem;
-}
-.gallery .container .wrapper .gallery-container ul.masonry-gallery li {
-  break-inside: avoid;
-  margin: 0 0 1rem;
-}
-
-.gallery .container .more{
+ .more{
   position: relative;
   margin-top: 60px;
   top: 50%;
@@ -1077,10 +1095,9 @@ text-decoration: none;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  top: 130px;
   }
   
-  .gallery .container .more:hover{
+ .more:hover{
     background-color: black;
     color: white;
   }
