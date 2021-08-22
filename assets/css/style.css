@@ -62,7 +62,8 @@ main{
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #001242;
-  border-top-color: white;
+  border-top-color: white;  
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   -webkit-animation: animate-preloader 1s linear infinite;
