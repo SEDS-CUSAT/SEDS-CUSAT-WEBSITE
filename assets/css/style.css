@@ -619,16 +619,20 @@ section {
 
 .about .content {
   z-index: 0;
+  text-align: justify;
+
 }
 
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+  
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .about .content ul li {
