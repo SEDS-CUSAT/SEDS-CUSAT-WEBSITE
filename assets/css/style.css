@@ -4,16 +4,6 @@ body {
   color: #444444;
 }
 
-a {
-  color: #f10e0e;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #c22a04;
-  text-decoration: none;
-}
-
 
 /*--------------------------------------------------------------
 # Preloader
@@ -816,19 +806,19 @@ margin-top: 38px;
 
 .team .container .team-row {
   position: relative;
-  column-count: 3;
+  column-count: 2;
   column-gap: 0;
   width: 100%;
 }
 
 .team .container .team-row .box {
-  position: relative;
+    position: relative;
     transform-style: preserve-3d;
     overflow: hidden;
     display: inline-block;
     place-items: center;
     transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
-    margin: 20px 10px;
+    margin: 20px 20px;
     page-break-inside: avoid;
     perspective: 512px;
     transition: 0.3s ease-out;
@@ -877,7 +867,7 @@ margin-top: 38px;
 
 @media (max-width: 781px) {
   .team .container .team-row{
-      column-count: 3;
+      column-count: 2;
   }
 }
 
@@ -920,6 +910,7 @@ border: none;
 cursor: pointer;
 border-radius: 5px;
 text-align: center;
+text-decoration: none;
 }
 
 .team .more:hover{
@@ -1285,6 +1276,10 @@ footer{
     color:#e91e63;
 }
 .fb:hover , .fb:hover .circle
+{
+    color:#0000FF;
+}
+.tw:hover , .tw:hover .circle
 {
     color:#2196f3;
 }

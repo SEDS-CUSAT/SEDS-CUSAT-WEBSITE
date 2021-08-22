@@ -1,0 +1,291 @@
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+
+#team{
+    min-height: 100vh;
+    max-width: 100%;
+    padding-top: 10px;
+  }
+  
+  .team .container .team-row {
+    position: relative;
+    column-count: 3;
+    column-gap: 0;
+    width: 100%;
+  }
+  
+  .team .container .team-row .box {
+    position: relative;
+      transform-style: preserve-3d;
+      overflow: hidden;
+      display: inline-block;
+      place-items: center;
+      transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+      margin: 20px 10px;
+      page-break-inside: avoid;
+      perspective: 512px;
+      transition: 0.3s ease-out;
+  }
+  
+  .team .container .team-row .box img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position-y: -1.5rem;
+    box-shadow: 0 4px 16px rgba(28, 28, 27, 0.2);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,
+      -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  
+  .team .container .team-row .box:hover img {
+    transform: scale(1.1);
+  }
+  
+  .team .container .team-row .box a {
+    position: absolute;
+    top: 8.5rem;
+    right: 0;
+    min-width: 40px;
+    padding: 0.25rem 0.75rem;
+    font-size: .75rem;
+    font-weight: 400;
+    font-family: "GT Sectra Fine", serif;
+    line-height: 1.5rem;
+    background-color: #1c1c1b;
+    color: rgb(238, 229, 229);
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.88, 0, 0.2, 1);
+    transition: -webkit-transform 0.6s cubic-bezier(0.88, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(1, 0.24, 0.1, 1.46);
+    transition: transform 0.6s cubic-bezier(1, 0.24, 0.1, 1.46),
+    -webkit-transform 0.6s cubic-bezier(1, 0.24, 0.1, 1.46);
+    will-change: transform;
+  }
+  
+  @media (max-width: 781px) {
+    .team .container .team-row{
+        column-count: 3;
+    }
+  }
+  
+  @media (max-width: 735px) {
+    .team .container .team-row .box > *:not(img) {
+        font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 482px) {
+    .team .container .team-row {
+        column-count: 1;
+    }
+  }
+  
+  @media (max-width: 385px) {
+    .team .container .team-row {
+        column-count: 1;
+    }
+  
+    .team .container .team-row .box > *:not(img) {
+        font-size: 14px;
+    }
+  }
+  
+  .team .more{
+  position: relative;
+  margin-top: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: dodgerblue;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  }
+  
+  .team .more:hover{
+    background-color: black;
+    color: white;
+  }
+  /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer{
+    background: #d4d1d1;
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+  
+  .footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .footer-container .left-col .logo{
+    width: 180px;
+    margin-left: 88px;
+  }
+  
+  .footer-container .left-col .rights-text{
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+  
+  .footer-container .right-col{
+    margin-top: -55px;
+  }
+  
+  .footer-container .right-col h1{
+    font-size: 26px;
+  }
+  
+  .footer-container .right-col .border{
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+  }
+  
+  .footer-container .right-col .newsletter-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container .right-col .txtb{
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+  }
+  
+  .footer-container .right-col .btn{
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #fc5c65;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+  }
+  
+  .footer-container .right-col .btn:hover{
+    opacity: .7;
+  }
+  
+  @media screen and (max-width:960px) {
+    .footer-container{
+      max-width: 600px;
+    }
+    .footer-container .right-col{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  
+    .footer-container .left-col{
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-container .left-col .logo{
+      margin-left: 0px;
+    }
+  }
+  
+  
+  @media screen and (max-width:700px){
+    .footer-container .right-col .btn{
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+      }
+      .footer-container .left-col .logo{
+        margin-left: 0px;
+      }
+  }
+  
+  /*social icons*/
+  .footer-container .left-col .social_links
+  {
+      padding: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .social_links .combo
+  {
+      transform: scale(0.9);
+      transition: 0.4s ease-in;
+      margin: 0 0.5rem;
+      height: 3em;
+      width: 3em;
+      line-height: 3em;
+  }
+  .combo .circle
+  {
+      color: #000000;
+      transition: 0.4s ease-in;
+      font-size: 3em;
+  }
+  .combo .icon
+  {
+      color: #b6b3b3;
+      font-size: 2rem;
+      transform: translateY(1px);
+      transition: 0.2s ease-in;
+  }
+  .combo:hover
+  {
+      transform: scale(1.1);
+  }
+  .combo:hover , .combo:hover .icon
+  {
+      color:white;
+  }
+  .ig:hover , .ig:hover .circle
+  {
+      color:#e91e63;
+  }
+  .fb:hover , .fb:hover .circle
+  {
+      color:#0000FF;
+  }
+  .tw:hover , .tw:hover .circle
+  {
+      color:#2196f3;
+  }
+  .tw:hover , .tw:hover .circle
+  {
+      color:#2196f3;
+  }
