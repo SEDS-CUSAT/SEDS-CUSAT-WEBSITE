@@ -624,9 +624,9 @@ section {
   box-shadow: 0 4px 16px rgba(28, 28, 27, 0.2);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,
-    -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+/*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
+  /*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,*/
+    /*-webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
