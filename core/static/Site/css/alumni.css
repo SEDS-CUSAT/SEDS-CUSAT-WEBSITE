@@ -1,0 +1,64 @@
+/* CSS for alumni page */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#main .section-title {
+    padding: 35px 0 15px;
+}
+
+.inner-page {
+    padding-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff6f3;
+  color: #441e13;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url('/assets/img/alumni/expand_less_black_24dp.svg');
+}
+
+.accordion-button {
+    font-size: 25px;
+    border-radius: 5px;
+    color: #220d06;
+}
+
+.accordion-button::before {
+    font-size: 25px;
+    background-color: #6d0606;
+}
+
+.accordion-button::after {
+    font-size: 25px;
+    color: #ffffff;
+    background-image: url('/assets/img/alumni/expand_more_black_24dp.svg');
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    background-color: #fff6f3;
+    color: #441e13;
+} 
+
+.accordion-body .social {
+    float: right;
+    color: #2867B2;
+}
+
+.card:hover .card-body{
+    transition: ease-in-out 0.5s;
+    opacity: 1;
+}
+
+.card-body {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: #fff6f3;
+    bottom: 0;
+    border-radius: 5px;
+    opacity: 0;
+}
