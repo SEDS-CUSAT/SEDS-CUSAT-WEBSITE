@@ -1,53 +1,52 @@
 from django.db import models
-from django.utils import timezone
 
-# Create your models here.
-# class HomeImage(models.Model):
-#
-#     title = models.CharField(max_length=100, default="Home Image title")
-#     sub_title = models.CharField(max_length=100, default="Home Image sub title")
-#     description = models.CharField(max_length=300, default="description")
-#     image = models.ImageField(default="image",upload_to="homeimage/")
-#
-#     def __str__(self):
-#         return self.title
-#
-#
-# class Event(models.Model):
-#
-#     CHOICES = (
-#         ('N', 'No'),
-#         ('Y', 'Yes')
-#     )
-#
-#     title = models.CharField(max_length=100, default="Event title")
-#     sub_title = models.CharField(max_length=100, default="Event sub title")
-#     description = models.TextField(max_length=1200, default="description")
-#     image = models.ImageField(default="image",upload_to="events/")
-#     isopen = models.CharField(choices=CHOICES, max_length=100, default="No")
-#     event_day = models.DateField(default=timezone.now())
-#     registration_link = models.CharField(max_length=100, default="#")
-#
-#     def __str__(self):
-#         return self.title
-#
-#
-# class Project(models.Model):
-#
-#     title = models.CharField(max_length=100, default="Project Title")
-#     sub_title = models.CharField(max_length=100, default="Project sub title")
-#     description = models.CharField(max_length=300, default="description")
-#     image = models.ImageField(default="image",upload_to="projects/")
-#
-#     def __str__(self):
-#         return self.title
-#
-#
-# class Gallery(models.Model):
-#
-#     title = models.CharField(max_length=100, default="Gallery image Title")
-#     sub_title = models.CharField(max_length=100, default="Gallery image sub title")
-#     image = models.ImageField(default="image", upload_to="gallery/")
-#
-#     def __str__(self):
-#         return self.title
+
+# Sharun's model
+# About model
+class About(models.Model):
+    image = models.ImageField(default="image", upload_to="about/")
+
+
+# Event model
+
+
+# Project model
+class Project(models.Model):
+    title = models.CharField(max_length=100, default="Project Title")
+    description = models.CharField(max_length=300, default="description")
+    image = models.ImageField(default="image", upload_to="project/")
+
+    def __str__(self):
+        return self.title
+
+
+# Blogs model
+class Blog(models.Model):
+    title = models.CharField(max_length=100, default="Blog Title")
+    author = models.CharField(max_length=20, default='Blog Author')
+    description = models.CharField(max_length=300, default="description")
+    published = models.DateField(auto_now=False, auto_now_add=False)
+    image = models.ImageField(default="image", upload_to="blog/")
+
+    def __str__(self):
+        return self.title
+
+
+# Team model
+class Team(models.Model):
+    name = models.CharField(max_length=100, default="name")
+    designation = models.CharField(max_length=100, default="designation")
+    image = models.ImageField(default="image", upload_to="team/")
+
+
+# Alumni model
+class Alumni(models.Model):
+    name = models.CharField(max_length=100, default="name")
+    designation = models.CharField(max_length=100, default="designation")
+    image = models.ImageField(default="image", upload_to="alumni/")
+    social = models.URLField(max_length=250)
+
+
+# Gallery model
+class Gallery(models.Model):
+    image = models.ImageField(default="image", upload_to="gallery/")
