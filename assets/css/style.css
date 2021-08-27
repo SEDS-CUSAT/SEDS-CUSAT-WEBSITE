@@ -382,7 +382,7 @@ main{
 #hero {
   width: 100%;
   height: 100vh;
-  background:url("../img/earth.jpg") top center;
+  background:url("../img/hero.jpg") top center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -510,18 +510,23 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
+  /* background:url("../img/venus.jpg") top center;     */
   background-size: cover;
   position: relative;
+  height: 100vh;
 }
 
 .about:before {
   content: "";
+  /* background-color: rgba(0, 0, 0, 0.609);     */
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
+
+
 
 .about .about-img {
   position: relative;
@@ -827,17 +832,15 @@ transition:color 200ms;
 }
 .copyright-text{
   margin: 0;
-  font-size: 145x;
+  font-size: 0.7rem;
   color: #ececec;
   margin: 0 auto;
 }
 
-.copyright-area:hover{
-  letter-spacing: 5px;
-}
+
 
 .footer-logo{
-  height: 25px;
+  height: 17px;
 }
 
 
@@ -906,3 +909,6 @@ transition:color 200ms;
    grid-row: span 2;
  }
  }
+
+
+ /* ****************#bg-try************************** */
