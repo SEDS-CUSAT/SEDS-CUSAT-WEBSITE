@@ -575,7 +575,7 @@ section {
 .about .about-img img {
   max-width: 100%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 .about .about-img::before {
@@ -650,20 +650,19 @@ section {
   width: 100%;
 }
 
-.box {
+.team .box {
   position: relative;
   transform-style: preserve-3d;
   overflow: hidden;
   display: inline-block;
   place-items: center;
   transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
-  margin: 20px 10px;
   page-break-inside: avoid;
   perspective: 512px;
   transition: 0.3s ease-out;
 }
 
-.box img {
+.team .box img {
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -678,17 +677,17 @@ section {
   transform: scale(0.9);
 }
 
-.box:hover img {
+.team .box:hover img {
   transform: scale(1.1);
 }
 
-.box a {
+.team .box a {
   position: absolute;
   top: 8.5rem;
   right: 0;
   min-width: 40px;
   padding: 0.25rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5rem;
   background-color: #1c1c1b;
@@ -703,7 +702,7 @@ section {
   will-change: transform;
 }
 
-@media (max-width: 781px) {
+@media screen and (max-width: 781px) {
   .team-row {
       column-count: 1;
   }
@@ -909,7 +908,7 @@ transition:color 200ms;
 .lightbox .img-fluid {
   margin: 0 auto;
   border: none;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
     
