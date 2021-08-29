@@ -35,8 +35,6 @@
   <link rel='stylesheet' id='parallel-magnificpopup-css'
     href='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/css/magnific-popup.css?ver=1.1.0'
     type='text/css' media='all' />
-  <script type='text/javascript'
-    src='https://demo.themely.com/parallel/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
   <!-- end -->
   
   <!-- Template Main CSS File -->
@@ -300,9 +298,6 @@
     </div>
   </section>
 </div>
-
-<script src="assets/js/events_1.js"></script>
-<script src="assets/js/events_2.js"></script>
 <!-- End Events Section -->
 
 <!-- ======= projects Section ======= -->
@@ -364,40 +359,6 @@
         </div>
       </section>
     </div>
-
-    <!-- scripts for projects section -->
-    <script type='text/javascript'
-      src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/scrollreveal.min.js?ver=3.3.2'></script>
-    <script type='text/javascript'
-      src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/jquery.magnific-popup.min.js?ver=1.1.0'></script>
-    <script type='text/javascript'
-      src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/jquery.magnific-popup-init.js?ver=1.1.0'></script>
-    <script type="text/javascript">
-      window.sr = ScrollReveal({ reset: false });
-
-
-      //for events grid
-      sr.reveal('.page-template-template-home .events-grid .container', {
-        duration: 900,
-        delay: 50,
-        origin: 'bottom',
-        distance: '20px',
-        scale: 1,
-        easing: 'linear',
-        viewFactor: 0.25
-      }, 150);
-
-      sr.reveal('.page-template-template-home .projects-grid .grid', {
-        duration: 900,
-        delay: 50,
-        origin: 'bottom',
-        distance: '20px',
-        scale: 1,
-        easing: 'linear',
-        viewFactor: 0.25
-      }, 150);
-    </script>
-
   </div>
 </section>
 <!-- Project Section -->
@@ -587,6 +548,47 @@
   <!-- about section transition -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
+
+  <!--for projects and events section-->
+  <!-- start -->
+    <script type='text/javascript'
+    src='https://demo.themely.com/parallel/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script src="assets/js/events_1.js"></script>
+    <script src="assets/js/events_2.js"></script>
+  <!-- end -->
+
+  <!-- scripts for projects section -->
+  <script type='text/javascript'
+  src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/scrollreveal.min.js?ver=3.3.2'></script>
+<script type='text/javascript'
+  src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/jquery.magnific-popup.min.js?ver=1.1.0'></script>
+<script type='text/javascript'
+  src='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/js/jquery.magnific-popup-init.js?ver=1.1.0'></script>
+<script type="text/javascript">
+  window.sr = ScrollReveal({ reset: false });
+
+
+  //for events grid
+  sr.reveal('.page-template-template-home .events-grid .container', {
+    duration: 900,
+    delay: 50,
+    origin: 'bottom',
+    distance: '20px',
+    scale: 1,
+    easing: 'linear',
+    viewFactor: 0.25
+  }, 150);
+
+  sr.reveal('.page-template-template-home .projects-grid .grid', {
+    duration: 900,
+    delay: 50,
+    origin: 'bottom',
+    distance: '20px',
+    scale: 1,
+    easing: 'linear',
+    viewFactor: 0.25
+  }, 150);
+</script>
 
 </body>
 
