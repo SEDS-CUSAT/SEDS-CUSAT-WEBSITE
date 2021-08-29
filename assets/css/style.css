@@ -1,3 +1,9 @@
+/* Parallax CSS */
+#events, #blogs, #alumni {
+  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65) ), url('/assets/img/mars.jpg') no-repeat fixed;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /*  styling scrollbars  */
 ::-webkit-scrollbar {
@@ -765,7 +771,7 @@ transition:color 200ms;
 /*--------------------------------------------------------------
 # Alumni-start
 --------------------------------------------------------------*/
-.alumni .box {
+.alumni .alumni-box {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -778,6 +784,11 @@ transition:color 200ms;
   position: relative;
   overflow: hidden;
   text-align: center;
+}
+
+.alumni .alumni-member-img:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
 }
 
 .alumni h3 {
