@@ -896,64 +896,18 @@ transition:color 200ms;
 # Gallery
 --------------------------------------------------------------*/
 
-.gird-item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #354F90;
-  border-radius: 4px;
-  transition: transform 0.3s ease-in-out;
-  color: white;
- 
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- }
- .ejercico a {
-   opacity: 0;
-   text-decoration:none;
-   cursor: none;
- }
- .gird-item:hover .ejercico a {
-   color: white;
- 
-   opacity: 1;
-   
- }
- .gird-item:hover {
-   filter: opacity(0.9);
-   transform: scale(1.04);
- }
- 
- /*-------------Gird style----------*/
- 
- .gird-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /*1fr Columnas que puedes colocar */
-    grid-auto-rows: minmax(250px, auto);
-    gap:15px; /*Separación automática*/
-    padding: 10px;
-    grid-auto-flow: dense; /*Para que no hayan espacios en blanco glaeria*/
- }
- 
- .text{
- 
-   
-     position: absolute;
-     color: white;
-     z-index: 3;
-     text-align: center;
-     margin-top: 20%;
-     
-     margin-left: 35px;
- }
- @media(min-width: 600px){
- .wide {
-   grid-column: span 2;
- }
- 
- .tall {
-   grid-row: span 2;
- }
- }
+.gallery-grid-item {
+  padding: 1px;
+}
+
+.lightbox:hover img {
+  transform: scale(1.025);
+  transition: 0.5s all ease-in-out;
+}
+
+.lightbox .img-fluid {
+  margin: 0 auto;
+  border: none;
+  height: 250px;
+  object-fit: cover;
+}
