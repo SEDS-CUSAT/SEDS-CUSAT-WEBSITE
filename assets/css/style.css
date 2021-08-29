@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: #ff0000;
+  /*color: #ff0000;*/
   text-decoration: none;
 }
 
@@ -375,7 +375,43 @@ main{
   margin: 15px;
 }
 
-
+/*
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}*/
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -531,7 +567,14 @@ section {
 .about .about-img {
   position: relative;
   transition: .5s;
-  margin-top: 82px;
+}
+
+@media (min-width: 991px) {
+  .about .about-img {
+    position: relative;
+    transition: .5s;
+    margin-top: 82px;
+  }
 }
 
 .about .about-img img {
@@ -595,8 +638,12 @@ section {
   }
 }
 
-
-
+/*for blog*/
+@media (max-width: 700px) {
+  #blog_more{
+      margin-top: 330px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Team
@@ -608,20 +655,19 @@ section {
   width: 100%;
 }
 
-.box {
+.team .box {
   position: relative;
   transform-style: preserve-3d;
   overflow: hidden;
   display: inline-block;
   place-items: center;
   transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
-  margin: 20px 10px;
   page-break-inside: avoid;
   perspective: 512px;
   transition: 0.3s ease-out;
 }
 
-.box img {
+.team .box img {
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -629,24 +675,24 @@ section {
   box-shadow: 0 4px 16px rgba(28, 28, 27, 0.2);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,
-    -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+/*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
+  /*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,*/
+    /*-webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
 
-.box:hover img {
+.team .box:hover img {
   transform: scale(1.1);
 }
 
-.box a {
+.team .box a {
   position: absolute;
   top: 8.5rem;
   right: 0;
   min-width: 40px;
   padding: 0.25rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5rem;
   background-color: #1c1c1b;
@@ -661,9 +707,9 @@ section {
   will-change: transform;
 }
 
-@media (max-width: 781px) {
+@media screen and (max-width: 781px) {
   .team-row {
-      column-count: 3;
+      column-count: 1;
   }
 }
 
@@ -720,7 +766,12 @@ transition:color 200ms;
 # Alumni-start
 --------------------------------------------------------------*/
 .alumni .box {
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   background: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
@@ -813,12 +864,25 @@ transition:color 200ms;
 # Project-end
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
 
+.gallery-grid-item {
+  padding: 1px;
+}
 
+.lightbox:hover img {
+  transform: scale(1.025);
+  transition: 0.5s all ease-in-out;
+}
 
-
-
-
+.lightbox .img-fluid {
+  margin: 0 auto;
+  border: none;
+  height: 250px;
+  object-fit: cover;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -842,73 +906,3 @@ transition:color 200ms;
 .footer-logo{
   height: 17px;
 }
-
-
-/*--------------------------------------------------------------
-# Gallery
---------------------------------------------------------------*/
-
-.gird-item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #354F90;
-  border-radius: 4px;
-  transition: transform 0.3s ease-in-out;
-  color: white;
- 
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- }
- .ejercico a {
-   opacity: 0;
-   text-decoration:none;
-   cursor: none;
- }
- .gird-item:hover .ejercico a {
-   color: white;
- 
-   opacity: 1;
-   
- }
- .gird-item:hover {
-   filter: opacity(0.9);
-   transform: scale(1.04);
- }
- 
- /*-------------Gird style----------*/
- 
- .gird-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /*1fr Columnas que puedes colocar */
-    grid-auto-rows: minmax(250px, auto);
-    gap:15px; /*Separación automática*/
-    padding: 10px;
-    grid-auto-flow: dense; /*Para que no hayan espacios en blanco glaeria*/
- }
- 
- .text{
- 
-   
-     position: absolute;
-     color: white;
-     z-index: 3;
-     text-align: center;
-     margin-top: 20%;
-     
-     margin-left: 35px;
- }
- @media(min-width: 600px){
- .wide {
-   grid-column: span 2;
- }
- 
- .tall {
-   grid-row: span 2;
- }
- }
-
-
- /* ****************#bg-try************************** */

@@ -6,7 +6,7 @@
   color: #fff;
 }
 
-#events-schedule-heading{
+/*#events-schedule-heading{
   font-size: 20px;
   color: #fff;
 
@@ -23,7 +23,7 @@
 #events-grid {
   padding: 15px;
   text-align: center;
-}
+}*/
 
 #events-span {
   margin: 5px auto 0;
@@ -126,11 +126,11 @@
   line-height: 40px;
   text-align: center;
   margin-right: 10px;
-  border-right: 1px solid #ddd;
-}
+  border-right: 1px solid #ddd;}
 
 .card-body {
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: rgb(255, 255, 255);
   color: black;
 }
