@@ -3,8 +3,10 @@
   background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65) ), url('/assets/img/mars.jpg') no-repeat fixed;
 }
 
-#about, #projects, #team, #alumni ,#gallery {
-  height: 100vh;
+@media (min-width: 1024px) {
+  #about, #team, #alumni {
+    height: 100vh;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -645,6 +647,7 @@ section {
 @media (min-width: 1024px) {
   .about {
     background-attachment: fixed;
+    padding-top: 100px;
   }
 }
 
@@ -908,7 +911,7 @@ transition:color 200ms;
 
 .copyright-area{
   background: #202020;
-  padding: 5px 0;
+  padding: 25px 0;
   transition: 0.5s;
   letter-spacing: 3px;
 }
