@@ -859,12 +859,25 @@ transition:color 200ms;
 # Project-end
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
 
+.gallery-grid-item {
+  padding: 1px;
+}
 
+.lightbox:hover img {
+  transform: scale(1.025);
+  transition: 0.5s all ease-in-out;
+}
 
-
-
-
+.lightbox .img-fluid {
+  margin: 0 auto;
+  border: none;
+  height: 250px;
+  object-fit: cover;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -889,25 +902,4 @@ transition:color 200ms;
 
 .footer-logo{
   height: 25px;
-}
-
-
-/*--------------------------------------------------------------
-# Gallery
---------------------------------------------------------------*/
-
-.gallery-grid-item {
-  padding: 1px;
-}
-
-.lightbox:hover img {
-  transform: scale(1.025);
-  transition: 0.5s all ease-in-out;
-}
-
-.lightbox .img-fluid {
-  margin: 0 auto;
-  border: none;
-  height: 250px;
-  object-fit: cover;
 }
