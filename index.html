@@ -26,12 +26,13 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
 
 
 <!--for projects and events section-->
   <!-- start -->
-  <link rel="stylesheet" type="text/css" href="assets/css/events_2.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/events_2.css"> -->
   <link rel='stylesheet' id='parallel-magnificpopup-css'
     href='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/css/magnific-popup.css?ver=1.1.0'
     type='text/css' media='all' />
@@ -121,188 +122,65 @@
     </section>
     <!-- End About Section -->
 <!-- ======= Events section ======= -->
-<div class="page-template-template-home">
-  <section id="events" class="events-grid">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Events</h2>
+<section id="events" class="events-grid">
+<div class="events-container">
+  <div class="section-title">
+    <h2>Events</h2>
+  </div>
+  <div class="eventWrapper">
+	
+    <div class="event">
+      <div class="event--img">
+        <a href="assets/img/about.jpg" onclick="if (!lightboxLoaded) return false" class="w-fancybox">
+          <img src="assets/img/about.jpg"  alt="poster">
+        </a>
       </div>
-
-      <!--<div>
-        <section id="events-grid">
-          <div class="container">
-            <div class="col-md-12 heading">
-              <h2 class="title" id="upcoming-events-title">UPCOMING EVENT 1<span></span></h2>
-            </div>
-
-            <div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="about-item" style="margin-bottom: 20px;">
-                      <img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="about-item" style="margin-bottom: 20px;">
-                      <img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="about-item" style="margin-bottom: 20px;">
-                      <img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div id="event-details">
-                    <h4 style="margin-right: -80px; text-align: centre;">Some details regarding events</h4><br>
-                    <h4 style="margin-right: -80px; text-align: centre;">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-        </section>
-      </div>-->
-
-      <div id="events-schedule-heading">
-        <!--<b>Events Schedule</b>-->
-      </div>
-
-      <div>
-        <div class="tab-content">
-          <div role="tabpanel">
-            <div id="accordion">
-
-              <div>
-                <div id="headingOne">
-                  <div class="card-head card-header" data-toggle="collapse" data-target="#collapseOne">
-                    <span class="time">01/01/2021</span>
-                    <h4>Event 1</h4>
-                    <h5 id="name">Lorem, ipsum.</h5>
-                  </div>
-                </div>
-
-                <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="card-body-details">Some Details of event</p>
-                    <div class="location">
-                      <span class="location-label"><!--Location:-->
-                        
-                        <div class="row">
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                        </div>
-                      
-                      
-                      </span><!--<span class="location-details">Hall 1 , Building A, Golden Street, Southafrica--></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div>
-                <div id="headingTwo">
-                  <div class="card-head card-header" data-toggle="collapse" data-target="#collapseTwo">
-                    <span class="time">02/02/2021</span>
-                    <h4>Event 2</h4>
-                    <h5 id="name">Lorem, ipsum.</h5>
-                  </div>
-                </div>
-
-                <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="card-body-details">Some Details of event</p>
-                    <div class="location">
-                      <span class="location-label"><!--Location:-->
-                        <div class="row">
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                        </div>
-                      </span>
-                <!--<span class="location-details">Hall 1 , Building A, Golden Street, Southafrica--></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div>
-                <div id="headingThree">
-                  <div class="card-head card-header" data-toggle="collapse" data-target="#collapseThree">
-                    <span class="time">03/03/2021</span>
-                    <h4>Event 3</h4>
-                    <h5 id="name">Lorem, ipsum.</h5>
-                  </div>
-                </div>
-
-                <div id="collapseThree" class="collapse" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="card-body-details">Some Details of event</p>
-                    <div class="location">
-                      <span class="location-label"><!--Location:-->
-                        <div class="row">
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-6 col-lg-4">
-                            <div class="about-item" style="margin-bottom: 20px;">
-                              <a href=""><img class="img-fluid" src="https://demo.themely.com/parallel/wp-content/uploads/2017/05/project3.jpg" alt="Image"></a>
-                            </div>
-                          </div>
-                        </div>
-                      </span><!--<span class="location-details">Hall 1 , Building A, Golden Street, Southafrica--></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <div class="event--date"><span id="date-details">Aug</span><span id="date">26</span><span id="date-details">2020</span><span id="date-details">Google meet</span></div>
+      <div class="event--content">
+        <h2><a href="#">Board Reveal</a></h2>
+        <p class="event--content-hall">Lorem ipsum dolor sit amet consectetur adipisicing elit. bleh bleh description kodkedei </p>
+        <div class="event--content-info">
+          <div><time>20:00 - 22:00</time></div>
+          <div class="event--content-price">250rs</div>
+          <div class="event--content-tickets"><a href="#" target="_blank" title="Tickets">Tickets</a></div>
         </div>
-      </div>
-
-      <!--<div class="button-events">
-        <button class="read-button " type="button">Read more</button>
-      </div>-->
-
+        <p class="event--content-ensemble">more details kodkederka</p>
+        <div class="event--content-social">          
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+      </div>	
     </div>
-  </section>
+    <div class="event">
+      <div class="event--img">
+        <a href="assets/img/about.jpg" onclick="if (!lightboxLoaded) return false" class="w-fancybox">
+          <img src="assets/img/about.jpg"  alt="poster">
+        </a>
+      </div>
+      <div class="event--date"><span id="date-details">Aug</span><span id="date">26</span><span id="date-details">2020</span><span id="date-details">Google meet</span></div>
+      <div class="event--content">
+        <h2><a href="#">Board Reveal</a></h2>
+        <p class="event--content-hall">Lorem ipsum dolor sit amet consectetur adipisicing elit. bleh bleh description kodkedei </p>
+        <div class="event--content-info">
+          <div><time>20:00 - 22:00</time></div>
+          <div class="event--content-price">250rs</div>
+          <div class="event--content-tickets"><a href="#" target="_blank" title="Tickets">Tickets</a></div>
+        </div>
+        <p class="event--content-ensemble">more details kodkederka</p>
+        <div class="event--content-social">          
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+      </div>	
+    </div>
 </div>
+
+</div>
+</section>
 <!-- End Events Section -->
 
 <!-- ======= projects Section ======= -->
