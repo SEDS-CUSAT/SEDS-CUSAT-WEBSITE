@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: #ff0000;
+  /*color: #ff0000;*/
   text-decoration: none;
 }
 
@@ -636,7 +636,7 @@ section {
 /*for blog*/
 @media (max-width: 700px) {
   #blog_more{
-      margin-top: 230px;
+      margin-top: 330px;
   }
 }
 
