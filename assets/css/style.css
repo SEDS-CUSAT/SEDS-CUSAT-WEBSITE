@@ -3,6 +3,9 @@
   background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65) ), url('/assets/img/mars.jpg') no-repeat fixed;
 }
 
+#about, #projects, #team, #alumni ,#gallery {
+  height: 100vh;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /*  styling scrollbars  */
@@ -856,6 +859,9 @@ transition:color 200ms;
 #project{
   height: 70%;
   width: 100%;
+}
+#projects-grid {
+  padding-top: 0;
 }
 .project-heading{
   margin-top: 10px;
