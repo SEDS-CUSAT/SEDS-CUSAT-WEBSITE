@@ -1007,6 +1007,13 @@ figure.effect-milo:hover p {
 		width: 100%;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+    .project-button-div .blog-more {
+      margin-top: 350px;
+    }
+}
+
 /*--------------------------------------------------------------
 # Project-end
 --------------------------------------------------------------*/
@@ -1037,7 +1044,7 @@ figure.effect-milo:hover p {
 
 .copyright-area{
   background: #202020;
-  padding: 25px 0;
+  padding: 15px 0;
   transition: 0.5s;
   letter-spacing: 3px;
 }
