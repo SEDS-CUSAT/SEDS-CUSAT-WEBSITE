@@ -995,6 +995,18 @@ figure.effect-milo:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
 /*--------------------------------------------------------------
 # Project-end
 --------------------------------------------------------------*/
