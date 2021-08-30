@@ -1,6 +1,6 @@
 /* Parallax CSS */
 #events, #blogs, #alumni {
-  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65) ), url('/assets/img/mars.jpg') no-repeat fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/assets/img/bg.jpg') no-repeat fixed;
 }
 
 @media (min-width: 1024px) {
