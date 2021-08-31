@@ -701,7 +701,7 @@ section {
 
 .team .box a {
   position: absolute;
-  top: 8.5rem;
+  top: 20rem;
   right: 0;
   min-width: 40px;
   padding: 0.25rem 0.75rem;
@@ -1063,6 +1063,10 @@ figure.effect-milo:hover p {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
+#events{
+  min-height: 100vh;
+}
+
 .events-container{
   width: 100%; 
 	max-width: 960px; 
