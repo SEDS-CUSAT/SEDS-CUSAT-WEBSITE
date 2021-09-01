@@ -725,6 +725,24 @@ section {
   }
 }
 
+@media (max-width: 991px) {
+  .team .box a {
+    top: 30rem;
+  }
+  .team .box:hover img {
+    transform: none;
+    transition: none;
+    -webkit-transition:none;
+    -webkit-transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .team .box a {
+    top: 22rem;
+  }
+}
+
 
 @media screen and (max-width: 781px) {
   .team-row {
@@ -746,6 +764,13 @@ section {
   }
 }
 
+@media (max-width: 540px) {
+  .team .box a {
+    top: 20rem;
+  }
+}
+
+
 @media (max-width: 482px) {
   .team-row {
       column-count: 1;
@@ -753,6 +778,15 @@ section {
   .team .box:hover img {
     transform: none;
   }
+  .team .box a {
+    top: 18rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .team .box a {
+    top: 15rem;
+  }  
 }
 
 @media (max-width: 385px) {
@@ -766,13 +800,38 @@ section {
   .team .box:hover img {
     transform: none;
   }
+
+  .team .box a {
+    top: 12rem;
+  }
+}
+
+@media (max-width: 311px) {
+  .team .box a {
+    top: 8rem;
+  }  
+}
+
+@media (max-width: 311px) {
+  .team .box a {
+    top: 6rem;
+  }  
+}
+
+@media (max-width: 233px) {
+  .team .box a {
+    top: 4rem;
+  }  
 }
 
 .more{
   display: block;
   color: #2098d1;
   border: none;
-  margin: 0 auto;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 0;
   padding: 5px 25px 5px 25px;
   font-weight: 900;
   background-color: rgb(0, 0, 0);
