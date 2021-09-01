@@ -1,7 +1,7 @@
 /* Parallax CSS */
-#events, #blogs, #alumni {
+/* #events, #blogs, #alumni {
   background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/assets/img/bg.jpg') no-repeat fixed;
-}
+} */
 
 @media (min-width: 1024px) {
   #about, #team, #alumni{
@@ -12,21 +12,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /*  styling scrollbars  */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 6px;
+  width: 1.5px;
+  height: 1px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #ffffff;
+  box-shadow: inset 0 0 5px #2099d186;
   transition: ease-in-out 1s;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0d007e;
+  background: #2098d1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff0000;
+  background: #2098d1
 }
 
 *{
@@ -38,7 +38,7 @@ body {
 }
 
 a {
-  /*color: #ff0000;*/
+  /*color: #2098d1*/
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ main{
   right: 15px;
   bottom: 55px;
   z-index: 996;
-  background: #0d007e;
+  background:  #2099d186;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -123,7 +123,7 @@ main{
 }
 
 .back-to-top:hover {
-  background: #ff0000;
+  background: #2098d1;
   color: #fff;
 }
 
@@ -149,8 +149,7 @@ main{
 }
 
 #header.fixed-top, #header.header-inner-pages {
-  background: rgb(13, 8, 32);
-  border-bottom: 0.1px solid #777777;
+  background: rgb(0, 4, 32);
 }
 
 #header.fixed-top {
@@ -298,7 +297,7 @@ main{
   height: 2px;
   bottom: -7px;
   left: 0;
-  background-color: #ff7f5d;
+  background-color: #2098d1;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -360,7 +359,7 @@ main{
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #0d007e0c;
+  background-color: #2098d10c;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -368,7 +367,7 @@ main{
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #ff0000;
+  color: #2098d1
 }
 
 .navbar-mobile > ul > li {
@@ -483,7 +482,7 @@ main{
 
 
 #main-para-highlight{
-  color: #ff0000;
+  color: #2098d1;
   cursor: pointer;
 }
 
@@ -543,7 +542,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #ff7f5d;
+  background: #2098d1;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -771,28 +770,84 @@ section {
 
 .more{
   display: block;
+  color: #2098d1;
   border: none;
-  margin: 15px auto;
-  padding: 5px 15px 5px 15px;
+  margin: 0 auto;
+  padding: 5px 25px 5px 25px;
   font-weight: 900;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #2098d1;
   transition: 0.5s;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 300;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+
+.more:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .more::after{
-font-weight:700;
-content: ">";
-margin-left:10px;
-color:#cea052;
-font-size:18px;
-vertical-align:middle;
-transition:color 200ms;
+  font-weight:700;
+  content: ">";
+  margin-left:10px;
+  color:#2098d1;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
 }
 
-.more:hover{
-  letter-spacing: 2px;
+.more:hover, 
+.more:focus, 
+.more:active,
+.more:hover:after {
+  color: white;
+}
+.more:hover:before,
+.more:focus:before, 
+.more:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.more::after{
+  font-weight:700;
+  content: ">";
+  margin-left:10px;
+  color:#2098d1;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
 }
 
 
@@ -806,7 +861,8 @@ transition:color 200ms;
   padding-top: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
-  background: #fff;
+  color: #fff;
+  background: #000;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   position: relative;
@@ -828,6 +884,7 @@ transition:color 200ms;
   font-weight: 600;
   text-align: center;
   position: relative;
+  color: #fff;
 }
 
 .alumni h3::after {
@@ -836,7 +893,7 @@ transition:color 200ms;
   display: block;
   width: 50px;
   height: 2px;
-  background: #ff7f5d;
+  background: #2098d1;
   bottom: 15px;
   left: calc(50% - 25px);
 }
@@ -849,33 +906,11 @@ transition:color 200ms;
 .alumni ul {
   padding: 0;
   list-style: none;
-  color: #444444;
+  color: #ffffff;
   line-height: 20px;
   font-size: 15px;
 }
-.alumni-more {
-  display: block;
-  border: none;
-  margin: 15px auto;
-  padding: 5px 15px 5px 15px;
-  font-weight: 900;
-  background-color: #fff;
-  border-radius: 5px;
-  transition: 0.5s;
-  font-weight: 500;
-}
-.alumni-more::after{
-  font-weight:700;
-  content: "  >>";
-  margin-left:10px;
-  color:#cea052;
-  font-size:18px;
-  vertical-align:middle;
-  transition:color 200ms;
-  }
-.alumni-more:hover{
-  letter-spacing: 2px;
-}
+
 /*--------------------------------------------------------------
 # Alumni-end
 --------------------------------------------------------------*/
@@ -1124,7 +1159,7 @@ figure.effect-milo:hover p {
 }
 .event--date{
   color: #fff;
-  background: #0d007e;
+  background: #002638;
 }
 
 .event:hover .event--date span:nth-child(2) {
