@@ -1101,8 +1101,8 @@ figure.effect-milo:hover p {
 # Gallery
 --------------------------------------------------------------*/
 
-.gallery-grid-item {
-  padding: 1px;
+.seds-gallery-grid-item {
+  padding: 15px;
 }
 
 .lightbox:hover img {
