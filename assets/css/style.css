@@ -688,9 +688,9 @@ section {
   box-shadow: 0 4px 16px rgba(28, 28, 27, 0.2);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-/*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
-  /*transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,*/
-    /*-webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;*/
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s,
+  -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
@@ -701,11 +701,11 @@ section {
 
 .team .box a {
   position: absolute;
-  top: 20rem;
+  top: 15rem;
   right: 0;
   min-width: 40px;
   padding: 0.25rem 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   background-color: #1c1c1b;
@@ -720,9 +720,21 @@ section {
   will-change: transform;
 }
 
+@media (max-width: 1199px) {
+  .team .box a {
+    top: 12rem;
+  }
+}
+
+
 @media screen and (max-width: 781px) {
   .team-row {
       column-count: 1;
+  }
+
+  .team .box:hover img {
+    transform: none;
+    transition: none;
   }
 }
 
@@ -730,11 +742,17 @@ section {
   .box > *:not(img) {
       font-size: 12px;
   }
+  .team .box:hover img {
+    transform: none;
+  }
 }
 
 @media (max-width: 482px) {
   .team-row {
       column-count: 1;
+  }
+  .team .box:hover img {
+    transform: none;
   }
 }
 
@@ -745,6 +763,9 @@ section {
 
   .box > *:not(img) {
       font-size: 14px;
+  }
+  .team .box:hover img {
+    transform: none;
   }
 }
 
