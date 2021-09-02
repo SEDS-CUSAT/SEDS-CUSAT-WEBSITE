@@ -1434,12 +1434,16 @@ figure.effect-milo:hover p {
 @media (min-width:600px) and (max-width:800px) {
 	.eventWrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		flex-wrap: wrap;
 	}
-	.event {
+	/*.event {
 		width: 48%;
 		margin-bottom: 35px;
+	}*/
+  .event {
+    width: 100%;
+		margin: 0 auto 35px;
 	}
 	.event--img {
 		height: 140px;
