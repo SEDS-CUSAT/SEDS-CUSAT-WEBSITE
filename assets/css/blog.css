@@ -1,7 +1,7 @@
 .container-blog {
     display: flex;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
   }
   
   .blogcard {
