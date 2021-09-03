@@ -4,195 +4,95 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
 	<title>Document</title>
-	
-	<style>
-			.container {
-	position: absolute;
-	top: 0;
-	}
-	.hideme {
-	opacity: 0;
-	z-index: -99999;
-	}
-
-	label:hover {
-	cursor: pointer;
-	}
-	.showme {
-	opacity: 1;
-	}
-	</style>
-
 </head>
 <body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div class="container">
-<form>
-<label >Click ME</label>
-<style>
-	label{
-		background-color: blanchedalmond;
-	}
+	<style>
+	.more{
+  display: block;
+  color: #2098d1;
+  border: none;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 5px 25px 5px 25px;
+  font-weight: 900;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #2098d1;
+  transition: 0.5s;
+  font-size: 1rem;
+  font-weight: 300;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+
+.more:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.more::after{
+  font-weight:700;
+  content: ">";
+  margin-left:10px;
+  color:#2098d1;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+.more:hover, 
+.more:focus, 
+.more:active,
+.more:hover:after {
+  color: white;
+}
+.more:hover:before,
+.more:focus:before, 
+.more:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.more::after{
+  font-weight:700;
+  content: ">";
+  margin-left:10px;
+  color:#2098d1;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
 </style>
-</form>
-
-<div class="container hideme">
-	<main>
-        <section>
-          <div class="launch-container">
-            <div class="launch">
-              <div class="launch__circle-circus"></div>
-            </div>
-          </div>
-          <div class="my-page">
-            <canvas id="background"></canvas>
-            <div class="background">
-                <h1>www.sedscusat.in</h1>
-                <p>: : . : : . : :</p>
-            </div>
-            <script>
-                const particles = [];
-            for (let i = 0; i < 100; i++) {
-                particles.push({
-                    x: Math.random() > .5 ? 0 : window.innerWidth,
-                    y: window.innerHeight / 2,
-                    vx: (Math.random() * 2) - 1,
-                    vy: (Math.random() * 2 - 1),
-                    history: [],
-                    size: 4 + Math.random() * 6,
-                    color: Math.random() > .5 ? "#FFF" : Math.random() > .5 ? "#FF0000" : "#FFFF00"
-                });
-            }
-            
-            const mouse = {
-                x: window.innerWidth / 2,
-                y: window.innerHeight / 2
-            };
-            
-            const canvas = document.getElementById('background');
-            
-            if (canvas && canvas.getContext) {
-                var context = canvas.getContext('2d');
-            
-                Initialize();
-            }
-            
-            function Initialize() {
-                canvas.addEventListener('mousemove', MouseMove, false);
-                window.addEventListener('resize', ResizeCanvas, false);
-                TimeUpdate();
-            
-                context.beginPath();
-            
-                ResizeCanvas();
-            }
-            
-            function TimeUpdate(e) {
-            
-                context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-            
-                for (let i = 0; i < particles.length; i++) {
-                    particles[i].x += particles[i].vx;
-                    particles[i].y += particles[i].vy;
-            
-                    if (particles[i].x > window.innerWidth) {
-                        particles[i].vx = -1 - Math.random();
-                    } else if (particles[i].x < 0) {
-                        particles[i].vx = 1 + Math.random();
-                    } else {
-                        particles[i].vx *= 1 + (Math.random() * 0.005);
-                    }
-            
-                    if (particles[i].y > window.innerHeight) {
-                        particles[i].vy = -1 - Math.random();
-                    } else if (particles[i].y < 0) {
-                        particles[i].vy = 1 + Math.random();
-                    } else {
-                        particles[i].vy *= 1 + (Math.random() * 0.005);
-                    }
-            
-                    context.strokeStyle = particles[i].color;
-                    context.beginPath();
-                    for (var j = 0; j < particles[i].history.length; j++) {
-                        context.lineTo(particles[i].history[j].x, particles[i].history[j].y);
-                    }
-                    context.stroke();
-            
-                    particles[i].history.push({
-                        x: particles[i].x,
-                        y: particles[i].y
-                    });
-                    if (particles[i].history.length > 45) {
-                        particles[i].history.shift();
-                    }
-            
-                    for (var j = 0; j < particles[i].history.length; j++) {
-                        particles[i].history[j].x += 0.01 * (mouse.x - particles[i].history[j].x) / (45/j);
-                        particles[i].history[j].y += 0.01 * (mouse.y - particles[i].history[j].y) / (45/j);
-                    }
-            
-            
-                    let distanceFactor = DistanceBetween(mouse, particles[i]);
-                    distanceFactor = Math.pow(Math.max(Math.min(10 - (distanceFactor / 10), 10), 2), .5);
-            
-                    context.fillStyle = particles[i].color;
-                    context.beginPath();
-                    context.arc(particles[i].x, particles[i].y, particles[i].size * distanceFactor, 0, Math.PI * 2, true);
-                    context.closePath();
-                    context.fill();
-            
-                }
-            
-                requestAnimationFrame(TimeUpdate);
-            }
-            
-            function MouseMove(e) {
-                mouse.x = e.layerX;
-                mouse.y = e.layerY;
-            
-                //context.fillRect(e.layerX, e.layerY, 5, 5);
-                //Draw( e.layerX, e.layerY );
-            }
-            
-            function Draw(x, y) {
-                context.strokeStyle = '#ff0000';
-                context.lineWidth = 4;
-                context.lineTo(x, y);
-                context.stroke();
-            }
-            
-            function ResizeCanvas(e) {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            
-            function DistanceBetween(p1, p2) {
-                const dx = p2.x - p1.x;
-                const dy = p2.y - p1.y;
-                return Math.sqrt(dx * dx + dy * dy);
-            }
-            
-            </script>
-            
-            <!--Script for timer-->
-                <script>
-                    setTimeout(function(){
-                       window.location.href = 'https://www.google.com/';
-                    }, 10000);
-                 </script>
-          </div>
-        </section>
-      </main>
-</div>
-
-</div>
-<script>
-	$("label").on("click", function() {
-	$("form").addClass("hideme")
-  $(".container").removeClass("hideme")
-})
-</script>
+<a href="page.html" class="more">Click more</a>
 </body>
 </html>
