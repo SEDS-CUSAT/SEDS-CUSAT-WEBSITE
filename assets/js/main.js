@@ -167,3 +167,24 @@
   }
 
 })()
+
+// For hero video in all breakpoints
+const videoElement = document.getElementById("myVideo");
+videoElement.playbackRate = 4.0;
+
+const smallDevice = window.matchMedia("(min-width: 576px)");
+const mediumDevice = window.matchMedia("(min-width: 768px)");
+
+smallDevice.addListener(handleDeviceChange);
+
+function handleDeviceChange(e) {
+  if (e.matches) {
+    videoElement.src = "assets/video/tablet-hero-video.mp4";
+  }
+  else { 
+    videoElement.src = "assets/video/mobile-hero-video.mp4";
+  }
+}
+
+// Run it initially
+handleDeviceChange(smallDevice);
