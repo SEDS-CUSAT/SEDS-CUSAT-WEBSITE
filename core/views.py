@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import About, Project, Blog, Team, Alumni, Gallery
 
 # from .models import HomeImage
 
@@ -11,20 +11,30 @@ def home(request):
     # n1 = abs(events_length - 3)
     # n = abs(length - 3)
     #
-    # context = {
-    #     "homeimage": HomeImage.objects.all()[n:],
-    #     "events": Event.objects.all()[n1:]
-    # }
+    context = {
+        'projects': Project.objects.all(),
+        'blogs ': Blog.objects.all(),
+        'gallery': Gallery.objects.all(),
+    }
+    return render(request, "home.html", context)
 
-    return render(request, "home.html")
-
+# Team function
 
 def alumni(request):
-    return render(request, "alumni_page.html")
+    context = {
+        'alumni': Alumni.objects.all(),
+    }
+    return render(request, "alumni_page.html", context)
 
 
 def gallery(request):
-    return render(request, "gallery_page.html")
+    context = {
+        'images': Gallery.objects.all()
+    }
+    return render(request, "gallery_page.html", context)
+
+def teams(request):
+    return render(request, "team_page.html")
 
 # error handler
 # def handler404(request, exception):

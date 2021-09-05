@@ -1,7 +1,5 @@
 /* CSS for alumni page */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 #main .section-title {
     padding: 35px 0 15px;
 }
@@ -16,9 +14,9 @@
   color: #441e13;
 }
 
-.accordion-button:not(.collapsed)::after {
-  background-image: url('/assets/img/alumni/expand_less_black_24dp.svg');
-}
+/*.accordion-button:not(.collapsed)::after {*/
+/*  background-image: url("{% static 'Site/img/expand_less_black_24dp.svg' %}");*/
+/*}*/
 
 .accordion-button {
     font-size: 25px;
@@ -34,7 +32,7 @@
 .accordion-button::after {
     font-size: 25px;
     color: #ffffff;
-    background-image: url('/assets/img/alumni/expand_more_black_24dp.svg');
+    /*background-image: url("{% static 'Site/img/expand_more_black_24dp.svg' %}");*/
 }
 
 .accordion-button:focus {
@@ -55,7 +53,7 @@
 
 .card-body {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     color: #fff6f3;
     bottom: 0;

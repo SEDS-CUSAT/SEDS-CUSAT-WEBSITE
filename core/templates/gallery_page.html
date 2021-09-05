@@ -4,123 +4,26 @@
 {% include "navbar.html" %}
 
 <!-- ======= Gallery Section ======= -->
-<section id="gallery" class="gallery">
-    <div class="gird-container">
-
-        <div class="gird-item tall" style="background-image: url('resource/img1.jpg');">
-            <div class="ejercico">
-                <a href="archivos/acrodeoncss/index.html">
-                    CAJA 1
+<section id="gallery-page">
+    <div class="section-title">
+        <h2>Gallery</h2>
+    </div>
+    <div class="seds-gallery container">
+        <div class="row">
+            <div class="col-md-4 seds-gallery-grid-item">
+                <a class="lightbox" href="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0060.NEF-min.jpg">
+                    <img src="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0060.NEF-min.jpg"
+                         class="img-fluid mx-auto d-block" alt="#">
                 </a>
             </div>
         </div>
 
-        <div class="gird-item" style="background-image: url('resource/img2.jpg');">
-            <div class="ejercico">
-                <a href="archivos/caja/index.html">
-                    CAJA 2
-                </a>
-            </div>
-        </div>
-
-        <div class="gird-item" style="background-image: url('resource/img3.jpg');">
-            <div class="ejercico">
-                <a href="archivos/card.boostrap/index.html">
-                    CAJA 3
-                </a>
-            </div>
-
-
-        </div>
-
-
-        <div class="gird-item" style="background-image: url('resource/img4.jpg');">
-
-            <div class="ejercico">
-                <a href="archivos/Flex.images/index.html">
-                    CAJA 4
-                </a>
-            </div>
-
-
-        </div>
-
-
-        <div class="gird-item wide" style="background-image: url('resource/img5.jpg');">
-
-            <div class="ejercico">
-                <a href="archivos/Form.boostrap/index.html">
-                    CAJA 5
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="gird-item tall" style="background-image: url('resource/img6.jpg');">
-
-            <div class="ejercico">
-                <a href="archivos/form.parpadei/index.html">
-                    CAJA 6
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="gird-item" style="background-image: url('resource/img7.jpg');">
-
-            <div class="ejercico">
-                <a href="archivos/Gallery.Hover.javas/index.html">
-                    CAJA 7
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="gird-item" style="background-image: url('resource/img8.jpg');">
-
-            <div class="ejercico">
-                <a href="archivos/Gird/index.html">
-                    CAJA 8
-                </a>
-            </div>
-        </div>
-
-
-        <div class="gird-item wide" style="background-image: url('resource/img9.jpg');">
-            <div class="ejercico">
-                <a href="archivos/Round.card.boostrap/index.html">
-                    CAJA 9
-                </a>
-            </div>
-        </div>
-
-        <div class="gird-item" style="background-image: url('resource/img2.jpg');">
-            <div class="ejercico">
-                <a href="archivos/caja/index.html">
-                    CAJA 2
-                </a>
-            </div>
-        </div>
-
-        <div class="gird-item" style="background-image: url('resource/img3.jpg');">
-            <div class="ejercico">
-                <a href="archivos/card.boostrap/index.html">
-                    CAJA 3
-                </a>
-            </div>
-        </div>
-
+        <a href="/">
+            <button class="go-back"> Go Back</button>
+        </a>
     </div>
 </section>
 
 <!-- End Gallery Section -->
 
-{% include "footer.html" %}
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-{% include "scripts.html" %}
 {% endblock content %}

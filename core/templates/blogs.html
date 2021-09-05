@@ -1,42 +1,31 @@
 <!-- ======= Blogs Section ======= -->
-<section id="blogs">
+<section id="blogs" style="min-height: 100vh;">
+
     <div class="section-title">
         <h2>Blogs</h2>
     </div>
-    <div class="container-blog">
 
+    <div class="container container-blog">
+
+        {% for item in blogs %}
         <div class="blogcard">
             <div class="infos">
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, cum.</p>
-                <span class="author-name">Nehha</span>
-                <span class="date">August 12, 2021</span>
+                <a href="https://medium.com/@sedscusat/interview-with-yuri-gagarin-but-you-are-yuri-8d394347d635">
+                    <span class="blog-title" style="color: black;">{{ item.description }}</span><br>
+                    <span class="author-name">{{ item.author }}</span>
+                    <span class="date">{{ item.published }}</span>
+                </a>
             </div>
-            <img src='https://images.unsplash.com/photo-1548625361-58a9b86aa83b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3Njk3Nw&ixlib=rb-1.2.1&q=80&w=400'
-                 alt="stars on sky">
+            <a href="https://medium.com/@sedscusat/interview-with-yuri-gagarin-but-you-are-yuri-8d394347d635"><img
+                    src="{{ item.image.url }}" alt="blog post"></a>
         </div>
-
-        <div class="blogcard">
-            <div class="infos">
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, assumenda!</p>
-                <span class="author-name">Nehha</span>
-                <span class="date">August 12, 2021</span>
-            </div>
-            <img src='https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3NzAzNw&ixlib=rb-1.2.1&q=80&w=400'
-                 alt="earth from space">
-        </div>
-
-        <div class="blogcard">
-            <div class="infos">
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate?</p>
-                <span class="author-name">Nehha</span>
-                <span class="date">August 12, 2021</span>
-            </div>
-            <img src='https://images.unsplash.com/photo-1586442886903-1cb792cd1dc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3NzA3NQ&ixlib=rb-1.2.1&q=80&w=400'
-                 alt="desert">
-        </div>
+        {% endfor %}
 
     </div>
-    <button class="blog-more">Read more</button>
+
+    <a href="https://medium.com/@sedscusat">
+        <button id="blog_more" class="blog-more">Read more</button>
+    </a>
 
 </section>
 <!-- End Blogs Section -->

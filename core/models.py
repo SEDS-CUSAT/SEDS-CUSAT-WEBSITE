@@ -13,7 +13,7 @@ class About(models.Model):
 # Project model
 class Project(models.Model):
     title = models.CharField(max_length=100, default="Project Title")
-    description = models.CharField(max_length=300, default="description")
+    description = models.CharField(max_length=300, default="Project Description")
     image = models.ImageField(default="image", upload_to="project/")
 
     def __str__(self):

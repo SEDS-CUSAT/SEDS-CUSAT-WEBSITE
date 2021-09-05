@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import home, alumni, gallery
+from .views import home, alumni, gallery, teams
 
 app_name = "core"
 
@@ -8,6 +8,7 @@ urlpatterns = [
     path('', home, name="home"),
     path('alumni', alumni, name="alumni"),
     path('gallery', gallery, name="gallery"),
+    path('teams', teams, name="teams"),
 
 ]
 

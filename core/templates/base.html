@@ -1,8 +1,7 @@
+<!DOCTYPE html>
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -17,30 +16,27 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap" rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+            rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="{% static 'Site/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link href="{% static 'Site/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-    <link href="{% static 'Site/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'Site/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-    <link href="{% static 'Site/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+          integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-    <!--for projects and events section-->
-    <!-- start -->
-    <link rel="stylesheet" type="text/css" href="{% static 'Site/css/events_2.css' %}">
-    <link rel='stylesheet' id='parallel-magnificpopup-css'
-          href='https://demo.themely.com/parallel/wp-content/themes/parallel-pro/css/magnific-popup.css?ver=1.1.0'
-          type='text/css' media='all'/>
-    <script type='text/javascript'
-            src='https://demo.themely.com/parallel/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-    <!-- end -->
+    <!-- Slideshow animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 
     <!-- Template Main CSS File -->
-    <link href="{% static 'Site/css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'Site/css/style.css' %}">
+    <!--Alumni CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'Site/css/alumni.css' %}">
+    <!--Blog CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'Site/css/blog.css' %}">
 
 </head>
@@ -49,7 +45,11 @@
 
 {% block content %}
 {% endblock content %}
-
+{% include "footer.html" %}
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+{% include "scripts.html" %}
 </body>
 
 </html>
