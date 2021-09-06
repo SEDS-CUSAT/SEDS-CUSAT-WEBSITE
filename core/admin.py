@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import About, Project, Blog, Team, Alumni, Gallery
+from .models import About, Project, Blog, Team, Alumni, Gallery,Event,SocialMedia
 
 # Register your models here.
+admin.site.register(Event)
+admin.site.register(SocialMedia)
 admin.site.register(About)
 admin.site.register(Project)
 admin.site.register(Blog)
