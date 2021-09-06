@@ -1,15 +1,12 @@
 from django.db import models
 from django.utils import timezone
 
-
-# Sharun's model
 # About model
 class About(models.Model):
     image = models.ImageField(default="image", upload_to="about/")
     description = models.CharField(max_length=3000, default="About Description")
 def __str__(self):
         return self.title
-# Event model
 
 
 # Project model
