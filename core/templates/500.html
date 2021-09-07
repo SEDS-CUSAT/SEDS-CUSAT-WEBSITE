@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<section class="error-wrap">
+    <div class="container">
+        <div class="error">
+            <div class="shape">
+                <div class="big-title"><h1>500</h1></div>
+            </div>
+            <div class="title">
+                <h1>Oops, internal server <span class="light">ERROR</span></h1>
+            </div>
+            <div class="subtitle"><a href="/"><h2></h2></a></div>
+        </div>
+    </div><!-- /.container -->
+</section>
+
+{% endblock content %}

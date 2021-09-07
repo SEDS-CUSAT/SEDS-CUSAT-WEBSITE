@@ -8,37 +8,21 @@
         </div>
 
         <div class="grid">
+            {% for item in projects %}
             <figure class="effect-milo">
-                <img src="https://seds-cusat.github.io/Image-Hoster/website/Project1.jpeg" height="500" width="500"
-                     alt="Project1"/>
+                <img src="{{ item.image.url }}" height="500" width="500"
+                     alt="{{ item.title }}"/>
                 <figcaption>
-                    <h2>Project<span> &emsp;1</span><br><label style="font-size: 18px;text-align:right">CANSAT&emsp;COMPETITION</label>
+                    <h2>Project<span> &emsp;1</span><br><label style="font-size: 18px;text-align:right">{{ item.title
+                        }}</label>
                     </h2>
 
-                    <p style="text-align: right;">An annual design build launch competition for space related
-                        topics conducting by American Astronautical society (AAS).</p>
-                    <a href="https://medium.com/@sedscusat/project-1-b3ef32cbc474" target="blank">View more</a>
+                    <p style="text-align: right;">{{ item.description }}</p>
+                    <a href="{{ item.link }}" target="blank">View more</a>
                     <!-- publish projects and add link here !-->
                 </figcaption>
             </figure>
-            <figure class="effect-milo">
-                <img src="https://seds-cusat.github.io/Image-Hoster/website/Project2.jpeg" height="500" width="500"
-                     alt="img03"/>
-                <figcaption>
-                    <h2>
-                        Project
-                        <span> &emsp;
-                        2
-                        </span><br>
-                        <label style="font-size: 18px; text-align:right">SAE&emsp;Aero&emsp;Design</label>
-                    </h2>
-                    <p style="text-align: right;">To design and construct a radio-controlled model aircraft that will
-                        lift the largest payload while still maintaining structural integrity.</p>
-                    <a href="https://medium.com/@sedscusat/sae-aero-design-e02f6907341e" target="blank">View more</a>
-                    <!-- publish projects and add link here !-->
-                </figcaption>
-            </figure>
-
+            {% endfor %}
         </div>
 
         <div class="project-button-div">

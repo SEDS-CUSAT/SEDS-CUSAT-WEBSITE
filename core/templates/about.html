@@ -2,23 +2,22 @@
 
 <!-- ======= About Section ======= -->
 <section id="about" class="about">
-			<div class="container" data-aos="fade-up">
-				<div class="row">
-					<div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
-						<div class="about-img">
-							<img src="{% static 'Site/img/about.jpg' %}" alt="SEDS-Team-image">
-						</div>
-					</div>
-					<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-						<div class="section-title">
-							<h2>About Us</h2>
-							<p style=" text-align: justify;">
-								SEDS CUSAT is a vibrant community of like-minded people who would love to be a part of a large family fascinated with the same interest, love, and craze for space. We are a group of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam.
-								We take the initiative to learn from one another and broaden our knowledge about space by creating memories to look back and cherish as we gaze up at the stars and beyond.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                    <img src="{{ about.image.url }}" alt="SEDS-Team-image">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p style=" text-align: justify;">
+                        {{ about.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End About Section -->

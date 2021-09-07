@@ -7,41 +7,42 @@
             <h2>Events</h2>
         </div>
         <div class="eventWrapper">
+            {% for item in events %}
             <div class="event">
                 <div class="event--img">
-                    <a href="assets/img/board.jpg">
+                    <a href="{{ item.image.url }}">
                         <!--give the link of the poster-->
-                        <img src="assets/img/board.jpg" alt="poster">
+                        <img src="{{ item.image.url }}" alt="poster">
                         <!--give the link of the poster again-->
                     </a>
                 </div>
                 <div class="event--date">
-                    <span class="date-details">September</span>
-                    <span id="date">04</span>
-                    <span class="date-details">2021</span>
+                    <span class="date-details">{{ item.event_day|date:"F" }}</span>
+                    <span id="date">{{ item.event_day|date:"d" }}</span>
+                    <span class="date-details">{{ item.event_day|date:"y" }}</span>
                     <span class="date-details">
                         <a style="color: #fff;"
-                           href="https://youtu.be/FF121er69zk"
-                           target="_blank">Google
-									meet</a>
+                           href="{{ events.registration_link }}"
+                           target="_blank">{{ item.location }}</a>
                     </span>
                 </div>
                 <!--insert meet link in the hashtag there-->
                 <div class="event--content">
                     <h2>
-                        <a href="https://youtu.be/FF121er69zk" target="_blank">
-                            INAUGURAL CEREMONY OF SEDS CUSAT BOARD COMMITTEE 2021-22
+                        <a href="{{ item.registration_link }}" target="_blank">
+                            {{ item.title }}
                         </a>
                     </h2>
                     <div class="event--content-info">
                         <div>
-                            <time>11:30 AM – 12:30 PM</time>
+                            <time>
+                                {{ item.event_time_start }} to
+                                {{ item.event_time_end }}
+                            </time>
                         </div>
                     </div>
                     <p class="event--content-ensemble">
-                        SEDS CUSAT unveils our new website and executive board
-                        2021 to our
-                        members, volunteers and all space enthusiasts
+                        {{ item.description }}
                     </p>
                     <div class="event--content-social">
                         <a href="https://www.instagram.com/ires_cusat/?hl=en" target="blank"
@@ -55,9 +56,11 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
+
         </div>
         <a href="">
-            <button id="blog_more" class="blog-more">Coming soon</button>
+            <button id="blog_more" class="blog-more">Stay Tuned</button>
         </a>
     </div>
 </section>}

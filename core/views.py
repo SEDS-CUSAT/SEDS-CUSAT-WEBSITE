@@ -1,24 +1,19 @@
 from django.shortcuts import render
-from .models import About, Project, Blog, Team, Alumni, Gallery
-
-# from .models import HomeImage
+from .models import About, Event, Project, Blog, Team, Alumni, Gallery
 
 
-# Create your views here.
 def home(request):
-    # length = len(HomeImage.objects.all())
-    # events_length = len(Event.objects.all())
-    # n1 = abs(events_length - 3)
-    # n = abs(length - 3)
-    #
     context = {
+        'about': About.objects.all()[0],
+        'events': Event.objects.all(),
         'projects': Project.objects.all(),
-        'blogs ': Blog.objects.all(),
+        'blogs': Blog.objects.all(),
+        'team': Team.objects.all(),
+        'alumni': Alumni.objects.all(),
         'gallery': Gallery.objects.all(),
     }
     return render(request, "home.html", context)
 
-# Team function
 
 def alumni(request):
     context = {
@@ -29,17 +24,22 @@ def alumni(request):
 
 def gallery(request):
     context = {
-        'images': Gallery.objects.all()
+        'gallery': Gallery.objects.all()
     }
     return render(request, "gallery_page.html", context)
 
+
 def teams(request):
-    return render(request, "team_page.html")
+    context = {
+        'team': Team.objects.all(),
+    }
+    return render(request, "team_page.html", context)
+
 
 # error handler
-# def handler404(request, exception):
-#     return render(request, '404.html', status=404)
-#
-#
-# def handler500(request):
-#     return render(request, '500.html', status=500)
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
+
+
+def handler500(request):
+    return render(request, '500.html', status=500)

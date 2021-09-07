@@ -6,27 +6,18 @@
 				<h2>Gallery</h2>
 			</div>
 			<div class="seds-gallery container">
+
 				<div class="row">
-					<div class="col-md-4 seds-gallery-grid-item">
-						<a class="lightbox"
-							href="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0064.NEF-min.jpg">
-							<img src="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0064.NEF-min.jpg"
-								class="img-fluid mx-auto d-block" alt="#">
-						</a>
+                    {% for item in gallery|slice:":3" %}
+                    <div class="col-md-4 seds-gallery-grid-item">
+                        <a class="lightbox"
+                           href="{{ item.image.url }}">
+                            <img src="{{ item.image.url }}"
+                                 class="img-fluid mx-auto d-block" alt="{{ item.title }}">
+                        </a>
 					</div>
-					<div class="col-md-4 seds-gallery-grid-item">
-						<a class="lightbox" href="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0954-min.JPG">
-							<img src="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0954-min.JPG"
-								class="img-fluid mx-auto d-block" alt="#">
-						</a>
-					</div>
-					<div class="col-md-4 seds-gallery-grid-item">
-						<a class="lightbox" href="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0973-min.JPG">
-							<img src="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0973-min.JPG"
-								class="img-fluid mx-auto d-block" alt="#">
-						</a>
-					</div>
-				</div>
+                    {% endfor %}
+                </div>
 			</div>
 			<a href="/gallery"><button class="more">View All</button></a>
 		</section>

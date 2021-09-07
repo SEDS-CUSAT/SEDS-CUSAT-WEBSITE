@@ -10,13 +10,13 @@
         {% for item in blogs %}
         <div class="blogcard">
             <div class="infos">
-                <a href="https://medium.com/@sedscusat/interview-with-yuri-gagarin-but-you-are-yuri-8d394347d635">
+                <a href="{{ item.medium_link }}">
                     <span class="blog-title" style="color: black;">{{ item.description }}</span><br>
                     <span class="author-name">{{ item.author }}</span>
                     <span class="date">{{ item.published }}</span>
                 </a>
             </div>
-            <a href="https://medium.com/@sedscusat/interview-with-yuri-gagarin-but-you-are-yuri-8d394347d635"><img
+            <a href="{{ item.medium_link }}"><img
                     src="{{ item.image.url }}" alt="blog post"></a>
         </div>
         {% endfor %}

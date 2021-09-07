@@ -10,14 +10,16 @@
     </div>
     <div class="seds-gallery container">
         <div class="row">
+            {% for item in gallery %}
             <div class="col-md-4 seds-gallery-grid-item">
-                <a class="lightbox" href="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0060.NEF-min.jpg">
-                    <img src="https://seds-cusat.github.io/Image-Hoster/gallery/DSC_0060.NEF-min.jpg"
-                         class="img-fluid mx-auto d-block" alt="#">
+                <a class="lightbox"
+                   href="{{ item.image.url }}">
+                    <img src="{{ item.image.url }}"
+                         class="img-fluid mx-auto d-block" alt="{{ item.title }}">
                 </a>
             </div>
+            {% endfor %}
         </div>
-
         <a href="/">
             <button class="go-back"> Go Back</button>
         </a>
