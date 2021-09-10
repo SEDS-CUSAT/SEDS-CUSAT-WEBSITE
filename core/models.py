@@ -62,11 +62,19 @@ class Team(models.Model):
         return self.name
 
 
+# Alumni category
+class AlumniCategory(models.Model):
+    categories = models.CharField(max_length=12, default='2021-2022')
+
+    def __str__(self):
+        return self.categories
+
+
 # Alumni model
 class Alumni(models.Model):
+    duration = models.ForeignKey(AlumniCategory, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=100, default="name")
     designation = models.CharField(max_length=100, default="designation")
-    description = models.CharField(max_length=1200, default="description")
     image = models.ImageField(default="image", upload_to="alumni/")
     social = models.URLField(max_length=250)
 

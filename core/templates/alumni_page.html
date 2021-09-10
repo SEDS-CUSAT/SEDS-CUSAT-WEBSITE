@@ -4,49 +4,36 @@
 {% block content %}
 {% include "navbar.html" %}
 
-<section id="alumni">
-    <main id="main">
-
+<section id="alumni-page">
+    <div class="container">
         <div class="section-title">
             <h2>Alumni</h2>
         </div>
-
-        <section class="inner-page">
-            <div class="container">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                2020-2021
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-                                    {% for item in alumni %}
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="{{ item.image.url }}" class="card-img-top"
-                                                 alt="head">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{ item.name }}</h5>
-                                                <p class="card-text">{{ item.designation }}<a href="{{ item.social }}"><i
-                                                        class="bi bi-linkedin social"></i></a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
+        {% for category in categories %}
+        <div class="category">
+            <h1>{{ category.categories }}</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 g-3">
+            {% for item in alumni %}
+            {% if item.id == category.id %}
+            <div class="col pt-2">
+                <div class="card">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}"/>
+                    <div class="data">
+                        <h4 class="card-title">{{ item.name }}</h4>
+                        <i class="card-text">{{ item.designation }}</i>
+                        <br>
+                        <a href="{{ item.social }}" class="bi bi-linkedin"></a>
                     </div>
                 </div>
             </div>
-        </section>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
 
-    </main>
     <!-- End #main -->
 </section>
 

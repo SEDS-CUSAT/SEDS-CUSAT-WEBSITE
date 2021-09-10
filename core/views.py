@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About, Event, Project, Blog, Team, Alumni, Gallery
+from .models import About, Event, Project, Blog, Team, AlumniCategory, Gallery, Alumni
 
 
 def home(request):
@@ -9,7 +9,6 @@ def home(request):
         'projects': Project.objects.all(),
         'blogs': Blog.objects.all(),
         'team': Team.objects.all(),
-        'alumni': Alumni.objects.all(),
         'gallery': Gallery.objects.all(),
     }
     return render(request, "home.html", context)
@@ -17,6 +16,7 @@ def home(request):
 
 def alumni(request):
     context = {
+        'categories': AlumniCategory.objects.all(),
         'alumni': Alumni.objects.all(),
     }
     return render(request, "alumni_page.html", context)
