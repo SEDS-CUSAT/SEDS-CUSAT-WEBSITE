@@ -4,7 +4,7 @@ from .models import About, Event, Project, Blog, Team, AlumniCategory, Gallery, 
 
 def home(request):
     context = {
-        'about': About.objects.all()[0],
+        'about': About.objects.all().first(),
         'events': Event.objects.all(),
         'projects': Project.objects.all(),
         'blogs': Blog.objects.all(),
