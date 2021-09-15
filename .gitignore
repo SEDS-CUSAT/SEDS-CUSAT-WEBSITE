@@ -13,4 +13,4 @@ tests/.coverage
 build/
 tests/report/
 media/
-.env
+seds_cusat_backend/.env
